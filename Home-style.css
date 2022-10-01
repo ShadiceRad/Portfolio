@@ -1,0 +1,207 @@
+
+h1,h2,h3{
+    font-family: Calibre, Inter, "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif !important;
+
+}
+body{
+    background-color: rgb(21, 12, 36) !important;
+   
+}
+.lightmode{
+    background-color: rgb(255, 255, 255) !important;
+    transition:all 0.4s ease-in-out;
+    --font-color: black;
+}
+.img-brand{
+    width: 60px;
+    margin-left: 50px;
+}
+
+.navbar-nav a{
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: 800;
+    color:#ffcac4 !important;
+}
+.navbar-nav a:hover{
+    color:salmon !important;
+}
+/*Creating toggle button*/
+.toggle{
+    --width: 80px;
+    --height: calc(var(--width)/3);
+
+    position:relative;
+    margin-left: 19px;
+    display:inline-block;
+    width: var(--width);
+    height: var(--height);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: var(--height);
+    cursor: pointer;
+
+}
+.toggle input{
+    display:none;
+}
+.toggle .labels{
+    position:absolute;
+    top: 6px;
+    right:5px;
+
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    font-family: sans-serif;
+    transition: all 0.4s ease-in-out;
+}
+.toggle .labels::after{
+    content: attr(data-off);
+    position: absolute;
+    right: 5px;
+    color: #4d4d4d;
+    opacity: 1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease-in-out;
+}
+.toggle .labels::before{
+    content: attr(data-on);
+    position: absolute;
+    left: 15px;
+    color: #ffffff;
+    opacity: 0;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
+    transition: all 0.4s ease-in-out;
+}
+.toggle input:checked~.labels::after {
+    opacity: 0;
+}
+
+.toggle input:checked~.labels::before {
+    opacity: 1;
+}
+/*Creating slider*/
+.toggle .slider{
+    position:absolute;
+    top: 0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--height);
+    background-color: #ccc;
+    transition: all 0.4s ease-in-out;
+}
+.toggle .slider::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(var(--height));
+    height: calc(var(--height));
+    border-radius: calc(var(--height)/2);
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease-in-out;
+}
+/*Adding slider effects*/
+.toggle input:checked + .slider{
+    background-color: #fa8072;
+}
+.toggle input:checked + .slider::before{
+    transform: translateX(calc(var(--width) - var(--height)));
+}
+.side_style_social{
+    position: relative;
+    width:100px;
+}
+.side_style_social ul li .vl{
+    border-left: 4px solid; 
+    height:100px;
+    color: salmon;
+    margin-left:10px;
+    
+}
+.side_style_social ul li {
+    list-style-type: none;
+    margin-bottom: 20px;
+    
+}
+.side_style_social ul li a{
+    font-size: 29px;
+    color: #ffcac4;
+   
+}
+.side_style_social ul li a:hover{
+    text-shadow:
+    0 0 7px rgb(254, 214, 214),
+    0 0 10px rgb(254, 214, 214),
+    0 0 21px rgb(254, 175, 175);
+    
+    transition: all 0.5s ease;
+    
+}
+.style_welcome{
+    height:100vh
+}
+.style_welcome .text-group{
+
+    padding-top: 100px;
+    padding-left: 100px;
+}
+
+.text-group h1{
+    font-family: Calibre, Inter, "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif !important;
+    font-weight: 900px !important;
+    font-size: 100px !important;
+    color: #ffcac4;
+}
+.text-group h2{
+    padding-top: 0px;
+    font-size: 70px;
+    font-weight: bold;
+    color:#ffcac4;
+    opacity: 60%;
+}
+.text-group h3{
+    color: salmon;
+    font-size: 40px;
+    padding-left: 15px;
+    padding-bottom: 0px;
+    margin-top:70px;
+    opacity: 60%;
+}
+.text-group p{
+    padding-left: 0px;
+    font-size: 30px;
+    color: salmon;
+    opacity: 40%;
+}
+.btn-style{
+    margin-top:80px;
+    margin-left:90px;
+}
+.btn-style a{
+    color:#ffcac4;
+    font-size: 25px;
+    border: 2px solid;
+    border-radius: 30px;
+    padding: 25px;
+    text-decoration: none;
+    margin-left: 18px;
+  
+}
+.btn-style a:hover{
+    color:rgb(46, 46, 46) ;
+    background-color:#ffcac4;
+}
+.style_skill h1{
+text-align: center;
+color:#ffcac4;
+font-weight: 600;
+}
+
+
+/*Phone screen configurations*/
+@media screen and (max-width:480px){
+    
+}
